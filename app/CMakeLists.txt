@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.22)
 
 add_library(app STATIC
     src/app.cpp
+    src/driver_stm32_fdcan.cpp
 )
 
 target_include_directories(app PUBLIC

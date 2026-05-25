@@ -1,5 +1,11 @@
 #include "app/app.hpp"
 
+#include <string>
+
+#include "app/driver_stm32_fdcan.hpp"
+#include "fdcan.h"
+#include "tim.h"
+#include "usart.h"
 namespace {
 
 constexpr uint32_t k_heartbeat_toggle_interval_ms = 500;
@@ -17,21 +23,71 @@ void update_heartbeat_led()
         HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
     }
 }
-
+gn10_can::drivers::DriverSTM32FDCAN driver(&hfdcan1);
 }  // namespace
 
 /**
  * @brief Initialize CAN and mainboard application state.
  */
-void setup() {}
+void setup()
+{
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
+    driver.init();
+}
 
 /**
  * @brief Run one control cycle and update status heartbeat LED.
  */
 void loop()
 {
-    update_heartbeat_led();
-    HAL_Delay(1);
+    HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+    HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+    HAL_GPIO_TogglePin(LED3_GPIO_Port, LED3_Pin);
+    HAL_GPIO_TogglePin(IN1_GPIO_Port, IN1_Pin);
+    HAL_GPIO_TogglePin(IN2_GPIO_Port, IN2_Pin);
+    HAL_GPIO_TogglePin(IN3_GPIO_Port, IN3_Pin);
+    HAL_GPIO_TogglePin(IN4_GPIO_Port, IN4_Pin);
+    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 40);
+    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 40);
+    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 40);
+    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4, 40);
+    // update_heartbeat_led();
+    HAL_Delay(1000);
+    HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+    HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+    HAL_GPIO_TogglePin(LED3_GPIO_Port, LED3_Pin);
+    HAL_GPIO_TogglePin(IN1_GPIO_Port, IN1_Pin);
+    HAL_GPIO_TogglePin(IN2_GPIO_Port, IN2_Pin);
+    HAL_GPIO_TogglePin(IN3_GPIO_Port, IN3_Pin);
+    HAL_GPIO_TogglePin(IN4_GPIO_Port, IN4_Pin);
+    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 10);
+    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 10);
+    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 10);
+    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4, 10);
+    // update_heartbeat_led();
+    HAL_Delay(1000);
+    HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+    HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+    HAL_GPIO_TogglePin(LED3_GPIO_Port, LED3_Pin);
+    HAL_GPIO_TogglePin(IN1_GPIO_Port, IN1_Pin);
+    HAL_GPIO_TogglePin(IN2_GPIO_Port, IN2_Pin);
+    HAL_GPIO_TogglePin(IN3_GPIO_Port, IN3_Pin);
+    HAL_GPIO_TogglePin(IN4_GPIO_Port, IN4_Pin);
+    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 0);
+    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 0);
+    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 0);
+    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4, 0);
+    // update_heartbeat_led();
+    HAL_Delay(1000);
+    gn10_can::CANFrame frame;
+    if (driver.receive(frame)) {
+        char tx_data[64];
+        size_t len = sprintf(tx_data, "id:%lx, len:%d", frame.id, frame.dlc);
+        HAL_UART_Transmit(&huart1, (uint8_t*)tx_data, len, 1000);
+    }
 }
 extern "C" {
 // C言語側の関数のオーバーライド
