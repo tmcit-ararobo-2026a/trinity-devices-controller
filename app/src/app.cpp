@@ -51,7 +51,7 @@ void loop()
         solenoid[1] = canframe.data[1];
         solenoid[2] = canframe.data[2];
         solenoid[3] = canframe.data[3];
-        }
+    }
     HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
     HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
     HAL_GPIO_TogglePin(LED3_GPIO_Port, LED3_Pin);
@@ -68,10 +68,6 @@ void loop()
     HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
     HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
     HAL_GPIO_TogglePin(LED3_GPIO_Port, LED3_Pin);
-    HAL_GPIO_TogglePin(IN1_GPIO_Port, IN1_Pin);
-    HAL_GPIO_TogglePin(IN2_GPIO_Port, IN2_Pin);
-    HAL_GPIO_TogglePin(IN3_GPIO_Port, IN3_Pin);
-    HAL_GPIO_TogglePin(IN4_GPIO_Port, IN4_Pin);
     __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 10);
     __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 10);
     __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 10);
@@ -81,10 +77,6 @@ void loop()
     HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
     HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
     HAL_GPIO_TogglePin(LED3_GPIO_Port, LED3_Pin);
-    HAL_GPIO_TogglePin(IN1_GPIO_Port, IN1_Pin);
-    HAL_GPIO_TogglePin(IN2_GPIO_Port, IN2_Pin);
-    HAL_GPIO_TogglePin(IN3_GPIO_Port, IN3_Pin);
-    HAL_GPIO_TogglePin(IN4_GPIO_Port, IN4_Pin);
     __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 0);
     __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 0);
     __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 0);
