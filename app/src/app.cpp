@@ -24,6 +24,9 @@ void update_heartbeat_led()
     }
 }
 gn10_can::drivers::DriverSTM32FDCAN driver(&hfdcan1);
+gn10_can::CANFrame canframe;
+uint8_t solenoid[4] = {0};
+uint16_t duty1 = 0, duty2 = 0, duty3 = 0, duty4 = 0;
 }  // namespace
 
 /**
@@ -43,13 +46,19 @@ void setup()
  */
 void loop()
 {
+    if (driver.receive(canframe)) {
+        solenoid[0] = canframe.data[0];
+        solenoid[1] = canframe.data[1];
+        solenoid[2] = canframe.data[2];
+        solenoid[3] = canframe.data[3];
+        }
     HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
     HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
     HAL_GPIO_TogglePin(LED3_GPIO_Port, LED3_Pin);
-    HAL_GPIO_TogglePin(IN1_GPIO_Port, IN1_Pin);
-    HAL_GPIO_TogglePin(IN2_GPIO_Port, IN2_Pin);
-    HAL_GPIO_TogglePin(IN3_GPIO_Port, IN3_Pin);
-    HAL_GPIO_TogglePin(IN4_GPIO_Port, IN4_Pin);
+    HAL_GPIO_TogglePin(IN1_GPIO_Port, solenoid[0]);
+    HAL_GPIO_TogglePin(IN2_GPIO_Port, solenoid[1]);
+    HAL_GPIO_TogglePin(IN3_GPIO_Port, solenoid[2]);
+    HAL_GPIO_TogglePin(IN4_GPIO_Port, solenoid[3]);
     __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 40);
     __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 40);
     __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 40);
