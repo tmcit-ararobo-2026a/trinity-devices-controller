@@ -29,9 +29,8 @@ void update_heartbeat_led()
 }
 gn10_can::drivers::DriverSTM32FDCAN driver(&hfdcan1);
 gn10_can::CANBus canbus(driver);
-gn10_can::devices::SolenoidDriverServer solenoiddriver(canbus, 0);
+gn10_can::devices::SolenoidDriverServer solenoid_driver(canbus, 0);
 uint8_t solenoid[8] = {0};
-uint16_t duty1 = 0, duty2 = 0, duty3 = 0, duty4 = 0;
 std::array<bool, 8> solenoid_targets{};
 }  // namespace
 
@@ -45,7 +44,7 @@ void setup()
     HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
     HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
     driver.init();
-    solenoiddriver.get_new_init();
+    solenoid_driver.get_new_init();
 }
 
 /**
@@ -53,42 +52,16 @@ void setup()
  */
 void loop()
 {
-    if (solenoiddriver.get_new_target(solenoid_targets)) {
+    if (solenoid_driver.get_new_target(solenoid_targets)) {
         for (size_t i = 0; i < 8; i++) {
             solenoid[i] = solenoid_targets[i];
         }
     }
-    HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
-    HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-    HAL_GPIO_TogglePin(LED3_GPIO_Port, LED3_Pin);
-    HAL_GPIO_TogglePin(IN1_GPIO_Port, solenoid[0]);
-    HAL_GPIO_TogglePin(IN2_GPIO_Port, solenoid[1]);
-    HAL_GPIO_TogglePin(IN3_GPIO_Port, solenoid[2]);
-    HAL_GPIO_TogglePin(IN4_GPIO_Port, solenoid[3]);
-    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 40);
-    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 40);
-    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 40);
-    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4, 40);
-    // update_heartbeat_led();
-    HAL_Delay(1000);
-    HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
-    HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-    HAL_GPIO_TogglePin(LED3_GPIO_Port, LED3_Pin);
-    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 10);
-    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 10);
-    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 10);
-    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4, 10);
-    // update_heartbeat_led();
-    HAL_Delay(1000);
-    HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
-    HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
-    HAL_GPIO_TogglePin(LED3_GPIO_Port, LED3_Pin);
-    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 0);
-    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_2, 0);
-    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_3, 0);
-    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_4, 0);
-    // update_heartbeat_led();
-    HAL_Delay(1000);
+    update_heartbeat_led();
+    HAL_GPIO_WritePin(IN1_GPIO_Port, IN1_Pin, (GPIO_PinState)solenoid[0]);
+    HAL_GPIO_WritePin(IN2_GPIO_Port, IN2_Pin, (GPIO_PinState)solenoid[1]);
+    HAL_GPIO_WritePin(IN3_GPIO_Port, IN3_Pin, (GPIO_PinState)solenoid[2]);
+    HAL_GPIO_WritePin(IN4_GPIO_Port, IN4_Pin, (GPIO_PinState)solenoid[3]);
     gn10_can::CANFrame frame;
     if (driver.receive(frame)) {
         char tx_data[64];
