@@ -4,6 +4,10 @@
 
 #include "app/driver_stm32_fdcan.hpp"
 #include "fdcan.h"
+#include "gn10_can/core/can_bus.hpp"
+#include "gn10_can/devices/motor_driver_client.hpp"
+#include "gn10_can/devices/motor_driver_types.hpp"
+#include "gn10_can/devices/solenoid_driver_server.hpp"
 #include "tim.h"
 #include "usart.h"
 namespace {
@@ -24,9 +28,11 @@ void update_heartbeat_led()
     }
 }
 gn10_can::drivers::DriverSTM32FDCAN driver(&hfdcan1);
-gn10_can::CANFrame canframe;
-uint8_t solenoid[4] = {0};
+gn10_can::CANBus canbus(driver);
+gn10_can::devices::SolenoidDriverServer solenoiddriver(canbus, 0);
+uint8_t solenoid[8] = {0};
 uint16_t duty1 = 0, duty2 = 0, duty3 = 0, duty4 = 0;
+std::array<bool, 8> solenoid_targets{};
 }  // namespace
 
 /**
@@ -39,6 +45,7 @@ void setup()
     HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
     HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
     driver.init();
+    solenoiddriver.get_new_init();
 }
 
 /**
@@ -46,11 +53,10 @@ void setup()
  */
 void loop()
 {
-    if (driver.receive(canframe)) {
-        solenoid[0] = canframe.data[0];
-        solenoid[1] = canframe.data[1];
-        solenoid[2] = canframe.data[2];
-        solenoid[3] = canframe.data[3];
+    if (solenoiddriver.get_new_target(solenoid_targets)) {
+        for (size_t i = 0; i < 8; i++) {
+            solenoid[i] = solenoid_targets[i];
+        }
     }
     HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
     HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
