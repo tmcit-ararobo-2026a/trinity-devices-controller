@@ -62,17 +62,14 @@ void loop()
     HAL_GPIO_WritePin(IN2_GPIO_Port, IN2_Pin, (GPIO_PinState)solenoid[1]);
     HAL_GPIO_WritePin(IN3_GPIO_Port, IN3_Pin, (GPIO_PinState)solenoid[2]);
     HAL_GPIO_WritePin(IN4_GPIO_Port, IN4_Pin, (GPIO_PinState)solenoid[3]);
-    gn10_can::CANFrame frame;
-    if (driver.receive(frame)) {
-        char tx_data[64];
-        size_t len = sprintf(tx_data, "id:%lx, len:%d", frame.id, frame.dlc);
-        HAL_UART_Transmit(&huart1, (uint8_t*)tx_data, len, 1000);
-    }
 }
 extern "C" {
 // C言語側の関数のオーバーライド
 /**
  * @brief Receive callback for FDCAN FIFO0.
  */
-void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef* hfdcan, uint32_t RxFifo0ITs) {}
+void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef* hfdcan, uint32_t RxFifo0ITs)
+{
+    canbus.update();
+}
 }
