@@ -273,6 +273,382 @@
 				)
 			)
 		)
+		(symbol "AO3400A_1"
+			(pin_names hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q1"
+				(at 6.35 1.2701 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "IRFML8244TRPBFTR"
+				(at 6.35 -1.2699 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://akizukidenshi.com/catalog/g/g106051/"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Type" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "N-Channel MOSFET"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "AO3400A_1_0_1"
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "AO3400A_1_1_1"
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54) hide
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54) hide
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54) hide
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Connector:Conn_01x01_Pin"
 			(pin_names
 				(offset 1.016) hide)
@@ -4169,301 +4545,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
-		(symbol "Transistor_FET:AO3400A"
-			(pin_names hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Q"
-				(at 5.08 1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "AO3400A"
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-				(at 5.08 -1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "N-Channel MOSFET"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SOT?23*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "AO3400A_0_1"
-				(polyline
-					(pts
-						(xy 0.254 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 1.905) (xy 0.254 -1.905)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.27) (xy 0.762 -2.286)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 0.508) (xy 0.762 -0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 1.651 0)
-					(radius 2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "AO3400A_1_1"
-				(pin input line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -13027,6 +13108,119 @@
 		)
 	)
 	(symbol
+		(lib_name "AO3400A_1")
+		(lib_id "Transistor_FET:AO3400A")
+		(at 363.22 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0574c33b-6709-4bc1-91d5-0bee519d9994")
+		(property "Reference" "Q9"
+			(at 369.57 100.3299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SSM6K819R"
+			(at 369.57 102.8699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "0Ikedalibrary:TSOP6F"
+			(at 368.3 103.505 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g106051/"
+			(at 363.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 363.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 363.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 363.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 363.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "f101ac29-6a60-4dad-b15e-7a54d71ab5fc")
+		)
+		(pin "2"
+			(uuid "478a7a14-b814-43d9-a16c-863557cd8f0f")
+		)
+		(pin "1"
+			(uuid "98cb8d61-afe3-4e74-890f-5ffc04c60b56")
+		)
+		(pin "4"
+			(uuid "c4488d0f-50f3-4bee-8c07-59cc2aec1eef")
+		)
+		(pin "5"
+			(uuid "3421d868-47d3-47c6-9f86-1f6d8f9faa90")
+		)
+		(pin "6"
+			(uuid "e7b59f34-11c5-4b72-abc4-150419a619a8")
+		)
+		(instances
+			(project "trinity-devices-controller_24V"
+				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
+					(reference "Q9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 27.94 223.52 90)
 		(unit 1)
@@ -13094,17 +13288,18 @@
 		)
 	)
 	(symbol
+		(lib_name "AO3400A_1")
 		(lib_id "Transistor_FET:AO3400A")
-		(at 363.22 194.31 0)
+		(at 293.37 194.31 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "05f9523c-3381-4153-93a3-145016ef7d5e")
-		(property "Reference" "Q11"
-			(at 369.57 193.0399 0)
+		(uuid "05ceef0e-a8b8-4c07-89a4-ef7b2c4cfded")
+		(property "Reference" "Q6"
+			(at 299.72 193.0399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13112,8 +13307,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IRFML8244TRPBFTR"
-			(at 369.57 195.5799 0)
+		(property "Value" "SSM6K819R"
+			(at 299.72 195.5799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13121,8 +13316,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 368.3 196.215 0)
+		(property "Footprint" "0Ikedalibrary:TSOP6F"
+			(at 298.45 196.215 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13133,7 +13328,7 @@
 			)
 		)
 		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g106051/"
-			(at 363.22 194.31 0)
+			(at 293.37 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13143,7 +13338,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 363.22 194.31 0)
+			(at 293.37 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13152,7 +13347,7 @@
 			)
 		)
 		(property "Sim.Device" ""
-			(at 363.22 194.31 0)
+			(at 293.37 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13161,7 +13356,7 @@
 			)
 		)
 		(property "Sim.Pins" ""
-			(at 363.22 194.31 0)
+			(at 293.37 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13170,7 +13365,7 @@
 			)
 		)
 		(property "Sim.Type" ""
-			(at 363.22 194.31 0)
+			(at 293.37 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13178,19 +13373,28 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "56c97210-0a2c-4efd-a8ce-de2b14c93d76")
+		(pin "3"
+			(uuid "b22fb89c-4944-46f7-b83c-5a29b79fe9a7")
 		)
 		(pin "2"
-			(uuid "96593387-964e-4f17-ae6b-255f438b6098")
+			(uuid "f06f763e-1108-4890-b6d4-9316f87a5bcd")
 		)
-		(pin "3"
-			(uuid "30fcc364-3033-4413-99b7-ce8faf3a69b3")
+		(pin "1"
+			(uuid "c7504db0-e548-48e5-82ae-72e444a0d548")
+		)
+		(pin "4"
+			(uuid "36a89f2d-2225-4466-99b2-29dc23e41f14")
+		)
+		(pin "5"
+			(uuid "9ebcd82f-b154-40ec-9fd3-f2c0d2f9a415")
+		)
+		(pin "6"
+			(uuid "da56efe3-d9f9-4999-b45c-cbad301b239b")
 		)
 		(instances
-			(project "trinity-devices-controller"
+			(project "trinity-devices-controller_24V"
 				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
-					(reference "Q11")
+					(reference "Q6")
 					(unit 1)
 				)
 			)
@@ -14435,6 +14639,119 @@
 				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
 					(reference "U5")
 					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "AO3400A_1")
+		(lib_id "Transistor_FET:AO3400A")
+		(at 293.37 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "19409a35-e2c3-41b0-8549-73198ce291a2")
+		(property "Reference" "Q5"
+			(at 299.72 147.3199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SSM6K819R"
+			(at 299.72 149.8599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "0Ikedalibrary:TSOP6F"
+			(at 298.45 150.495 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g106051/"
+			(at 293.37 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 293.37 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 293.37 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 293.37 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 293.37 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "66e38903-cec5-4e2a-931f-d32e17b6c157")
+		)
+		(pin "2"
+			(uuid "656ab93b-6cc5-4f0a-a1b2-d2dd13879747")
+		)
+		(pin "1"
+			(uuid "edaed236-529c-430c-bbec-b77f20ecb5cb")
+		)
+		(pin "4"
+			(uuid "37c1a58b-b06d-4cd0-87f9-760f1b9e7f2d")
+		)
+		(pin "5"
+			(uuid "780d33ad-9094-4df5-a620-dc807559df66")
+		)
+		(pin "6"
+			(uuid "4c6cb44c-e420-4118-a662-e62913b2a8f4")
+		)
+		(instances
+			(project "trinity-devices-controller_24V"
+				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
+					(reference "Q5")
+					(unit 1)
 				)
 			)
 		)
@@ -16447,6 +16764,119 @@
 		)
 	)
 	(symbol
+		(lib_name "AO3400A_1")
+		(lib_id "Transistor_FET:AO3400A")
+		(at 293.37 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "36491861-e540-4f3b-9ffd-08c437118d08")
+		(property "Reference" "Q2"
+			(at 299.72 100.3299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SSM6K819R"
+			(at 299.72 102.8699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "0Ikedalibrary:TSOP6F"
+			(at 298.45 103.505 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g106051/"
+			(at 293.37 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 293.37 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 293.37 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 293.37 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 293.37 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "abb53fa6-db27-47c8-8815-ede4fd3f4e14")
+		)
+		(pin "2"
+			(uuid "248d274f-6815-4b20-9c8b-163605051359")
+		)
+		(pin "1"
+			(uuid "9eb3c375-2edc-4bee-9fe0-c84979131717")
+		)
+		(pin "4"
+			(uuid "cb3f3abc-85ba-4c8e-8293-bec2a74d7382")
+		)
+		(pin "5"
+			(uuid "0a01ea7b-a66b-41ed-8f46-00f2c8eca8f9")
+		)
+		(pin "6"
+			(uuid "155065d9-5be4-417c-a6c3-28ff9b62eada")
+		)
+		(instances
+			(project "trinity-devices-controller_24V"
+				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 170.18 55.88 0)
 		(unit 1)
@@ -17541,6 +17971,119 @@
 			(project "trinity-devices-controller"
 				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
 					(reference "#PWR30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "AO3400A_1")
+		(lib_id "Transistor_FET:AO3400A")
+		(at 363.22 194.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "44432b68-fc75-4984-9bb2-593743d0e4eb")
+		(property "Reference" "Q11"
+			(at 369.57 193.0399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SSM6K819R"
+			(at 369.57 195.5799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "0Ikedalibrary:TSOP6F"
+			(at 368.3 196.215 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g106051/"
+			(at 363.22 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 363.22 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 363.22 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 363.22 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 363.22 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "2052182f-b9c6-420a-adae-3c2b7de0983b")
+		)
+		(pin "2"
+			(uuid "7b617cc1-c1da-4cf3-bc9f-c1487ff64df2")
+		)
+		(pin "1"
+			(uuid "55cde31e-8c9b-4146-a5f3-004ae1898f0a")
+		)
+		(pin "4"
+			(uuid "750b3c10-d906-4a56-ae6e-3593374924d1")
+		)
+		(pin "5"
+			(uuid "3d195b59-d071-41b0-baff-fada97c35884")
+		)
+		(pin "6"
+			(uuid "d40f016a-d5dc-4d9c-8190-84c6cdd120ca")
+		)
+		(instances
+			(project "trinity-devices-controller_24V"
+				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
+					(reference "Q11")
 					(unit 1)
 				)
 			)
@@ -19502,109 +20045,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:AO3400A")
-		(at 363.22 148.59 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6d23f371-8a89-4539-9725-51b5ee189ea9")
-		(property "Reference" "Q10"
-			(at 369.57 147.3199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRFML8244TRPBFTR"
-			(at 369.57 149.8599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 368.3 150.495 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g106051/"
-			(at 363.22 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 363.22 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" ""
-			(at 363.22 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 363.22 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 363.22 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a51b845f-2051-4d32-891a-1d4a3863e38e")
-		)
-		(pin "2"
-			(uuid "0bd2990e-0bb2-402c-a7fe-a06914ee04f6")
-		)
-		(pin "3"
-			(uuid "a4b9cb6a-ca1e-4f71-9a66-517af610d140")
-		)
-		(instances
-			(project "trinity-devices-controller"
-				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
-					(reference "Q10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+12V")
 		(at 346.71 86.36 0)
 		(unit 1)
@@ -20213,109 +20653,6 @@
 			(project "trinity-devices-controller"
 				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
 					(reference "R58")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:AO3400A")
-		(at 293.37 194.31 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "76785e4a-9495-4d12-91ab-cae160f60d0d")
-		(property "Reference" "Q6"
-			(at 299.72 193.0399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRFML8244TRPBFTR"
-			(at 299.72 195.5799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 298.45 196.215 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g106051/"
-			(at 293.37 194.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 293.37 194.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" ""
-			(at 293.37 194.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 293.37 194.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 293.37 194.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ab51c0a7-9511-4fd8-8e66-ad6979243c09")
-		)
-		(pin "2"
-			(uuid "2f83a7d8-7de0-40c4-922f-41e27d8332a1")
-		)
-		(pin "3"
-			(uuid "d3b4e611-5f1c-475e-a4df-464fc5b5ac08")
-		)
-		(instances
-			(project "trinity-devices-controller"
-				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
-					(reference "Q6")
 					(unit 1)
 				)
 			)
@@ -22384,109 +22721,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:AO3400A")
-		(at 363.22 55.88 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9641ae71-dbba-485e-8476-5175195e008b")
-		(property "Reference" "Q8"
-			(at 369.57 54.6099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRFML8244TRPBFTR"
-			(at 369.57 57.1499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 368.3 57.785 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g106051/"
-			(at 363.22 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 363.22 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" ""
-			(at 363.22 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 363.22 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 363.22 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f4b1da11-9891-42d4-85ba-0a80e10e6a72")
-		)
-		(pin "2"
-			(uuid "56bbc69e-91cd-4aa1-b49a-e72d015d8e9b")
-		)
-		(pin "3"
-			(uuid "f88a5126-70e4-4971-bf85-64cfb394ee12")
-		)
-		(instances
-			(project "trinity-devices-controller"
-				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
-					(reference "Q8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Isolator:TLP293-4")
 		(at 337.82 146.05 0)
 		(unit 1)
@@ -22794,109 +23028,6 @@
 			(project "trinity-devices-controller"
 				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
 					(reference "#PWR81")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:AO3400A")
-		(at 363.22 101.6 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9f2a869d-588d-4561-86e6-022822f96974")
-		(property "Reference" "Q9"
-			(at 369.57 100.3299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRFML8244TRPBFTR"
-			(at 369.57 102.8699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 368.3 103.505 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g106051/"
-			(at 363.22 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 363.22 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" ""
-			(at 363.22 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 363.22 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 363.22 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "33b07abe-b8a8-4a36-a6f8-3f37057b7486")
-		)
-		(pin "2"
-			(uuid "65b9b87a-93a7-4f37-bdb8-daddb0e85897")
-		)
-		(pin "3"
-			(uuid "cac02cfc-fe6d-4ef6-820a-5f221cafb9c6")
-		)
-		(instances
-			(project "trinity-devices-controller"
-				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
-					(reference "Q9")
 					(unit 1)
 				)
 			)
@@ -23256,109 +23387,6 @@
 			(project "trinity-devices-controller"
 				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
 					(reference "R21")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:AO3400A")
-		(at 293.37 101.6 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a92e35a3-763d-4018-ac0d-d6afed744259")
-		(property "Reference" "Q2"
-			(at 299.72 100.3299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRFML8244TRPBFTR"
-			(at 299.72 102.8699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 298.45 103.505 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g106051/"
-			(at 293.37 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 293.37 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" ""
-			(at 293.37 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 293.37 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 293.37 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fefdbdae-2d22-4daf-8edb-e622b77a7192")
-		)
-		(pin "2"
-			(uuid "12d0fe85-d8d0-4862-8c63-fa0abdd5e162")
-		)
-		(pin "3"
-			(uuid "d3814710-8e47-4e75-a3c0-24011c17d24e")
-		)
-		(instances
-			(project "trinity-devices-controller"
-				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
-					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -23770,6 +23798,119 @@
 			(project "trinity-devices-controller"
 				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
 					(reference "#PWR31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "AO3400A_1")
+		(lib_id "Transistor_FET:AO3400A")
+		(at 363.22 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "add2ac92-ca21-4dae-b071-94c2bb7a11a4")
+		(property "Reference" "Q10"
+			(at 369.57 147.3199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SSM6K819R"
+			(at 369.57 149.8599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "0Ikedalibrary:TSOP6F"
+			(at 368.3 150.495 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g106051/"
+			(at 363.22 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 363.22 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 363.22 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 363.22 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 363.22 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "c3d6bc9c-18f2-4687-a4de-4fc63d5feb42")
+		)
+		(pin "2"
+			(uuid "1f6da6df-faf8-4072-989d-0a09972bb657")
+		)
+		(pin "1"
+			(uuid "45d37889-2ea1-49c2-9f48-841b3e25296e")
+		)
+		(pin "4"
+			(uuid "f75a3c52-e424-43f8-9d7e-559b2a4b11f8")
+		)
+		(pin "5"
+			(uuid "a4f11676-e175-4381-ac8b-e852d3d139d2")
+		)
+		(pin "6"
+			(uuid "69fc2bae-4f4f-49e6-ab37-3c6b69ea19a6")
+		)
+		(instances
+			(project "trinity-devices-controller_24V"
+				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
+					(reference "Q10")
 					(unit 1)
 				)
 			)
@@ -25383,6 +25524,119 @@
 		)
 	)
 	(symbol
+		(lib_name "AO3400A_1")
+		(lib_id "Transistor_FET:AO3400A")
+		(at 363.22 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c60afe2e-7e7a-40be-9dda-0400cda6192d")
+		(property "Reference" "Q8"
+			(at 369.57 54.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SSM6K819R"
+			(at 369.57 57.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "0Ikedalibrary:TSOP6F"
+			(at 368.3 57.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g106051/"
+			(at 363.22 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 363.22 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" ""
+			(at 363.22 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" ""
+			(at 363.22 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Type" ""
+			(at 363.22 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "104c02ba-60a5-49f7-bc89-ae09c564eb1c")
+		)
+		(pin "2"
+			(uuid "dd9e893f-a45f-4eae-a3e0-6e6cdad64bca")
+		)
+		(pin "1"
+			(uuid "49114678-df3e-48bc-82e5-65765ec50415")
+		)
+		(pin "4"
+			(uuid "d3c5424c-6506-4dcf-83e5-2b4c9cd9e269")
+		)
+		(pin "5"
+			(uuid "b313de9e-08f1-47e8-8375-88d2627f4f49")
+		)
+		(pin "6"
+			(uuid "921a6ec3-5dcb-4178-9898-a9d96d026b65")
+		)
+		(instances
+			(project "trinity-devices-controller_24V"
+				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
+					(reference "Q8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 142.24 95.25 0)
 		(mirror x)
@@ -26021,109 +26275,6 @@
 			(project "trinity-devices-controller"
 				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
 					(reference "#PWR73")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:AO3400A")
-		(at 293.37 148.59 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cfce53ba-8472-4420-99fa-71ecc0a4e9cd")
-		(property "Reference" "Q5"
-			(at 299.72 147.3199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "IRFML8244TRPBFTR"
-			(at 299.72 149.8599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 298.45 150.495 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://akizukidenshi.com/catalog/g/g106051/"
-			(at 293.37 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 293.37 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" ""
-			(at 293.37 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" ""
-			(at 293.37 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Type" ""
-			(at 293.37 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3ee98897-43c7-4a05-942a-746e96ee8550")
-		)
-		(pin "2"
-			(uuid "7c8bcac7-fa19-492e-976c-e0c06e7f3e13")
-		)
-		(pin "3"
-			(uuid "8c01738c-63b8-43e4-94a7-59c83be6e5f1")
-		)
-		(instances
-			(project "trinity-devices-controller"
-				(path "/bba0c1e4-ea56-4c73-b2d0-def23e39ab96"
-					(reference "Q5")
 					(unit 1)
 				)
 			)
@@ -28474,6 +28625,7 @@
 		)
 	)
 	(symbol
+		(lib_name "AO3400A_1")
 		(lib_id "Transistor_FET:AO3400A")
 		(at 293.37 55.88 0)
 		(unit 1)
@@ -28492,7 +28644,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IRFML8244TRPBFTR"
+		(property "Value" "SSM6K819R"
 			(at 299.72 57.1499 0)
 			(effects
 				(font
@@ -28501,7 +28653,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+		(property "Footprint" "0Ikedalibrary:TSOP6F"
 			(at 298.45 57.785 0)
 			(effects
 				(font
@@ -28558,14 +28710,23 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
+		(pin "3"
 			(uuid "1199687b-dbcc-4793-9565-223ca0a24860")
 		)
 		(pin "2"
 			(uuid "6451965a-42da-41be-8b23-20fc7c5436f9")
 		)
-		(pin "3"
+		(pin "1"
 			(uuid "c88bc214-1f23-427b-b576-c7f819ef9bd0")
+		)
+		(pin "4"
+			(uuid "f5f1b5b4-6638-451e-962b-36510633cf83")
+		)
+		(pin "5"
+			(uuid "c4d1adec-ff07-4f74-8731-d28c84fb24c3")
+		)
+		(pin "6"
+			(uuid "219a848f-2816-4db5-bee3-b614c18b5ea5")
 		)
 		(instances
 			(project "trinity-devices-controller"
