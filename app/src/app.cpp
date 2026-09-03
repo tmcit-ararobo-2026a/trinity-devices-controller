@@ -2,7 +2,8 @@
 
 #include <string>
 
-#include "app/driver_stm32_fdcan.hpp"
+#include "app/can_callback_helper.hpp"
+#include "app/can_driver.hpp"
 #include "fdcan.h"
 #include "gn10_can/core/can_bus.hpp"
 #include "gn10_can/devices/motor_driver_client.hpp"
@@ -27,7 +28,7 @@ void update_heartbeat_led()
         HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
     }
 }
-gn10_can::drivers::DriverSTM32FDCAN driver(&hfdcan1);
+gn10_can::drivers::CANDriver driver(&hfdcan1);
 gn10_can::CANBus canbus(driver);
 gn10_can::devices::SolenoidDriverServer solenoid_driver(canbus, 0);
 uint8_t solenoid[8] = {0};
@@ -70,6 +71,16 @@ extern "C" {
  */
 void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef* hfdcan, uint32_t RxFifo0ITs)
 {
-    canbus.update();
+    (void)RxFifo0ITs;
+    if (process_fdcan_fifo(hfdcan, &hfdcan1, canbus, FDCAN_RX_FIFO0)) return;
+}
+
+/**
+ * @brief Receive callback for FDCAN FIFO1.
+ */
+void HAL_FDCAN_RxFifo1Callback(FDCAN_HandleTypeDef* hfdcan, uint32_t RxFifo1ITs)
+{
+    (void)RxFifo1ITs;
+    if (process_fdcan_fifo(hfdcan, &hfdcan1, canbus, FDCAN_RX_FIFO1)) return;
 }
 }

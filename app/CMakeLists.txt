@@ -2,12 +2,11 @@ cmake_minimum_required(VERSION 3.22)
 
 add_library(app STATIC
     src/app.cpp
-    src/driver_stm32_fdcan.cpp
+    src/can_driver.cpp
 )
 
 target_include_directories(app PUBLIC
     include
-    ${CMAKE_SOURCE_DIR}/gn10_can
 )
 target_compile_features(app PUBLIC cxx_std_17)
 

@@ -16,10 +16,10 @@
 namespace gn10_can {
 namespace drivers {
 
-class DriverSTM32FDCAN : public ICANDriver
+class CANDriver : public ICANDriver
 {
 public:
-    DriverSTM32FDCAN(FDCAN_HandleTypeDef* hfdcan) : hfdcan_(hfdcan) {}
+    CANDriver(FDCAN_HandleTypeDef* hfdcan) : hfdcan_(hfdcan) {}
 
     bool init();
     bool send(const CANFrame& frame) override;
@@ -27,6 +27,7 @@ public:
 
 private:
     FDCAN_HandleTypeDef* hfdcan_;
+    const uint32_t TX_FIFO_TIMEOUT = 2;  // 送信FIFOが空くまで待つ際のタイムアウト
 };
 }  // namespace drivers
 }  // namespace gn10_can

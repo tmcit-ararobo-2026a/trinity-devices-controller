@@ -1,9 +1,9 @@
-#include "app/driver_stm32_fdcan.hpp"
+#include "app/can_driver.hpp"
 
 namespace gn10_can {
 namespace drivers {
 
-bool DriverSTM32FDCAN::init()
+bool CANDriver::init()
 {
     FDCAN_FilterTypeDef filter;
     filter.IdType       = FDCAN_STANDARD_ID;
@@ -25,7 +25,7 @@ bool DriverSTM32FDCAN::init()
     return true;
 }
 
-bool DriverSTM32FDCAN::send(const CANFrame& frame)
+bool CANDriver::send(const CANFrame& frame)
 {
     FDCAN_TxHeaderTypeDef tx_header;
     if (frame.is_extended) {
@@ -35,12 +35,19 @@ bool DriverSTM32FDCAN::send(const CANFrame& frame)
     }
     tx_header.Identifier          = frame.id;
     tx_header.TxFrameType         = FDCAN_DATA_FRAME;
-    tx_header.DataLength          = frame.dlc;
+    tx_header.DataLength          = (uint32_t)frame.dlc;
     tx_header.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
     tx_header.BitRateSwitch       = FDCAN_BRS_OFF;
     tx_header.FDFormat            = FDCAN_CLASSIC_CAN;
     tx_header.TxEventFifoControl  = FDCAN_NO_TX_EVENTS;
     tx_header.MessageMarker       = 0;
+
+    uint32_t start_tick = HAL_GetTick();
+    while (HAL_FDCAN_GetTxFifoFreeLevel(hfdcan_) == 0) {
+        if (HAL_GetTick() - start_tick > TX_FIFO_TIMEOUT) {
+            return false;
+        }
+    }
 
     if (HAL_FDCAN_AddMessageToTxFifoQ(
             hfdcan_, &tx_header, const_cast<uint8_t*>(frame.data.data())
@@ -50,7 +57,7 @@ bool DriverSTM32FDCAN::send(const CANFrame& frame)
     return true;
 }
 
-bool DriverSTM32FDCAN::receive(CANFrame& out_frame)
+bool CANDriver::receive(CANFrame& out_frame)
 {
     FDCAN_RxHeaderTypeDef rx_header;
     uint8_t rx_data[8];
@@ -60,10 +67,12 @@ bool DriverSTM32FDCAN::receive(CANFrame& out_frame)
     }
 
     out_frame.id          = rx_header.Identifier;
-    out_frame.dlc         = rx_header.DataLength;
     out_frame.is_extended = (rx_header.IdType == FDCAN_EXTENDED_ID);
+    out_frame.dlc         = (uint8_t)rx_header.DataLength;
 
-    for (uint8_t i = 0; i < out_frame.dlc; ++i) {
+    uint8_t copy_len = dlc::dlc_to_data_length(out_frame.dlc);
+
+    for (uint8_t i = 0; i < copy_len; ++i) {
         out_frame.data[i] = rx_data[i];
     }
 
