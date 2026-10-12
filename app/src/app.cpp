@@ -63,6 +63,10 @@ void loop()
     HAL_GPIO_WritePin(IN2_GPIO_Port, IN2_Pin, (GPIO_PinState)solenoid[1]);
     HAL_GPIO_WritePin(IN3_GPIO_Port, IN3_Pin, (GPIO_PinState)solenoid[2]);
     HAL_GPIO_WritePin(IN4_GPIO_Port, IN4_Pin, (GPIO_PinState)solenoid[3]);
+    HAL_GPIO_WritePin(IN5_GPIO_Port, IN5_Pin, (GPIO_PinState)solenoid[4]);
+    HAL_GPIO_WritePin(IN6_GPIO_Port, IN6_Pin, (GPIO_PinState)solenoid[5]);
+    HAL_GPIO_WritePin(IN7_GPIO_Port, IN7_Pin, (GPIO_PinState)solenoid[6]);
+    HAL_GPIO_WritePin(IN8_GPIO_Port, IN8_Pin, (GPIO_PinState)solenoid[7]);
 }
 extern "C" {
 // C言語側の関数のオーバーライド
